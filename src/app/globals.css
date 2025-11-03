@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --color-canvas: #ffffff;
+  --color-surface: #f7f7f7;
+  --color-border: #e2e2e2;
+  --color-divider: #efefef;
+  --color-text-primary: #111111;
+  --color-text-secondary: #666666;
+  --color-accent: #acff0d;
+  --color-success-text: #027a48;
+  --color-success-bg: #ecfdf3;
+  --shadow-card: 0 12px 32px rgba(17, 17, 17, 0.08);
+  --shadow-card-hover: 0 20px 40px rgba(17, 17, 17, 0.12);
+  --radius-card: 0.75rem;
+  --radius-pill: 999px;
+  --font-heading: var(--font-oswald), "Oswald", "Arial Black", sans-serif;
+  --font-body: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --base-font-size: 16px;
+  --line-height-base: 1.5;
+}
+
+@theme inline {
+  --color-background: var(--color-canvas);
+  --color-foreground: var(--color-text-primary);
+  --font-sans: var(--font-body);
+  --font-mono: "Fira Mono", "Courier New", monospace;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--base-font-size);
+  line-height: var(--line-height-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-text-primary);
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease, background-size 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+::selection {
+  background: rgba(172, 255, 13, 0.6);
+  color: var(--color-text-primary);
+}

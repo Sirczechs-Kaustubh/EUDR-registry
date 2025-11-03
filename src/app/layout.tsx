@@ -1,0 +1,27 @@
+import type { Metadata } from "next";
+import { Oswald } from "next/font/google";
+import "./globals.css";
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "Dilify | EUDR Certificate Intelligence",
+  description:
+    "Search, review and download Dilify’s EUDR certificates with confidence.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${oswald.variable} antialiased`}>{children}</body>
+    </html>
+  );
+}
