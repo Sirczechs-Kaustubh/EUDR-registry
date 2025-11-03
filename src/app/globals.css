@@ -27,6 +27,12 @@
   --font-mono: "Fira Mono", "Courier New", monospace;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: var(--color-canvas);
